@@ -7,7 +7,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     //  var height = MediaQuery.of(context).size.height;
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      title: "flutter Demo",
+      // debugShowCheckedModeBanner: false,
+
       home: Homepage(
           // child: Scaffold(
           //   body: Center(
@@ -78,14 +80,34 @@ class Homepage extends StatelessWidget {
     var containerHeight = screenheight / 5;
     return SafeArea(
       child: Scaffold(
+        floatingActionButton: FloatingActionButton(onPressed: () {},child: Icon(Icons.add),),
         body: Center(
-          child: Container(
-            height: containerHeight,
-            width: MediaQuery.of(context).size.width / 4,
-            color: Colors.deepOrange,
+            child: Scaffold(
+          body: Center(
+            child: Container(
+                height: 200,
+                width: 200,
+                color: Colors.amber,
+                child: Stack(
+                  alignment: Alignment.center,
+                  overflow: Overflow.visible,
+                  children: <Widget>[
+                    Container(
+                      height: 100,
+                      width: 100,
+                      color: Colors.amber,
+                    ),
+                    Positioned(
+                        bottom: -50,
+                        child: CircleAvatar(
+                          radius: 50,
+                        ))
+                  ],
+                )),
           ),
-        ),
+        )),
       ),
     );
   }
 }
+
