@@ -81,7 +81,7 @@ class Homepage extends StatelessWidget {
         body: Center(
           child: Container(
             height: containerHeight,
-            width: MediaQuery.of(context).size.height / 4,
+            width: MediaQuery.of(context).size.width / 4,
             color: Colors.deepOrange,
           ),
         ),
