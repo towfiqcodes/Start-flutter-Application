@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:splashscreen/screen/SliverAppBarTest.dart';
 
-import 'Page1.dart';
-import 'Page2.dart';
-import 'Page3.dart';
-import 'Page4.dart';
+import 'screen/Page1.dart';
+import 'screen/Page2.dart';
+import 'screen/Page3.dart';
+import 'screen/Page4.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,23 +14,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: DefaultTabController(length:2, 
-      child: Scaffold(
-        appBar: AppBar(
-          bottom: TabBar(
-            labelColor: Colors.black,
+      home: Page1(),
+      // home: DefaultTabController(length:2, 
+      // child: Scaffold(
+      //   appBar: AppBar(
+      //     bottom: TabBar(
+      //       labelColor: Colors.black,
       
-            tabs: [
-                Tab(icon: Icon(Icons.camera),),
-                 Tab(icon: Icon(Icons.message),),
-          ]),
-        ),
-        body: TabBarView(children: [
-          Page1(),
-          Page4()
-        ],),
-      )
-      ),
+      //       tabs: [
+      //           Tab(icon: Icon(Icons.camera),),
+      //            Tab(icon: Icon(Icons.message),),
+      //     ]),
+      //   ),
+      //   body: TabBarView(children: [
+      //     Page1(),
+      //     Page4()
+      //   ],),
+      // )
+      // ),
 
 //           // child: Scaffold(
 //           //   body: Center(
